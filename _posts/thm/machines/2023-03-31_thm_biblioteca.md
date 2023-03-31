@@ -8,6 +8,7 @@ render_with_liquid: false
 ---
 # Biblioteca - Medium
 > Shhh. Be very very quiet, no shouting inside the biblioteca.
+
 > Hit 'em with the classics.
 
 ### Enumeration
@@ -104,7 +105,9 @@ hazel@biblioteca:~$ python3 -c 'import sys; print("\n".join(sys.path))'
 /usr/lib/python3/dist-packages
 ```
 
-But this is not important to us as we can just force the `PYTHONPATH` to be where we save our modified version of the `hashlib.py` library. We move to the `/tmp` dir as we don't have write permissions in our home directory. We create our version of the `hashlib.py` library that will be executed as sudo and calls `/bin/bash`. After running the script with `PYTHONPATH=/tmp` we managed to get root.
+But this is not important to us as we can just force the `PYTHONPATH` to be where we save our modified version of the `hashlib.py` library.
+
+We move to the `/tmp` dir as we don't have write permissions in our home directory. We create our version of the `hashlib.py` library that will be executed as sudo and calls `/bin/bash`. After running the script with `PYTHONPATH=/tmp` we managed to get root.
 
 ```bash
 hazel@biblioteca:~$ cd /tmp
