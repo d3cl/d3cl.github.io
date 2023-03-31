@@ -1,5 +1,5 @@
 ---
-title: CyberApocalypse 2023
+title: HackTheBox - CyberApocalypse 2023
 author: 0
 date: 2023-03-23 16:00:00 +0800
 categories: [htb, ctf]

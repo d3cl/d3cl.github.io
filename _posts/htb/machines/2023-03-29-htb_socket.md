@@ -1,5 +1,5 @@
 ---
-title: Socket
+title: HackTheBox - Socket
 author: 0
 date: 2023-03-29 16:00:00 +0800
 categories: [htb, machine]
