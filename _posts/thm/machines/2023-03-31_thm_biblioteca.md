@@ -1,7 +1,7 @@
 ---
 title: TryHackMe - Biblioteca
 author: 0
-date: 2023-03-31 16:00:00 +0800
+date: 2023-03-31 17:00:00 +0800
 categories: [thm, machine]
 tags: [sql injection, credential reuse, sudo -l, python library hijacking]
 render_with_liquid: false
