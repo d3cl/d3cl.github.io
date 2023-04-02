@@ -3,7 +3,7 @@ title: HackTheBox - Socket
 author: 0
 date: 2023-03-29 16:00:00 +0800
 categories: [htb, machine]
-tags: [debugging, reverse engineering, websockets, sql injection, spec files, sudo -l]
+tags: [debugging, reverse-engineering, websockets, sql-injection, spec-files, sudo-l]
 render_with_liquid: false
 ---
 
