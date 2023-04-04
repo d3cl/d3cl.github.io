@@ -3,7 +3,7 @@ title: HackTheBox - CyberApocalypse 2023
 author: 0
 date: 2023-03-23 16:00:00 +0800
 categories: [htb, ctf]
-tags: [ctf]
+tags: [ctf, sql-injection, graphql, server-side-template-injection, server-side-request-forgery, jwt, insecure-deserialization, pickle, linux-jailbreak, python-jailbreak, eval, redis]
 render_with_liquid: false
 
 ---

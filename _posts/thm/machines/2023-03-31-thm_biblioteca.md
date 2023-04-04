@@ -6,10 +6,11 @@ categories: [thm, machine]
 tags: [sql-injection, credential-reuse, sudo-l, python-library hijacking]
 render_with_liquid: false
 ---
-# Biblioteca - Medium
 > Shhh. Be very very quiet, no shouting inside the biblioteca.
 
 > Hit 'em with the classics.
+
+This machine starts off with a website containing a login screen.
 
 ### Enumeration
 ```bash

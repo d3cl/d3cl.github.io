@@ -7,6 +7,8 @@ tags: [debugging, reverse-engineering, websockets, sql-injection, spec-files, su
 render_with_liquid: false
 ---
 
+This machine starts out with a website that allows the user to convert QR codes to text or vice-verse. The website also contains a link to download the source code.
+
 ### Foothold
 #### Debug downloaded app ELF file
 
