@@ -3,7 +3,7 @@ title: TryHackMe - Biblioteca
 author: 0
 date: 2023-03-31 17:00:00 +0800
 categories: [thm, machine]
-tags: [sql-injection, credential-reuse, sudo-l, python-library hijacking]
+tags: [sql-injection, credential-reuse, sudo-l, python, library-hijacking]
 render_with_liquid: false
 ---
 > Shhh. Be very very quiet, no shouting inside the biblioteca.
