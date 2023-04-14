@@ -2,7 +2,7 @@
 title: HackTheBox - Diogenes Rage
 author: 0
 date: 2023-03-30 16:00:00 +0800
-categories: [htb, challenges]
+categories: [htb, challenge]
 tags: [race-condition]
 render_with_liquid: false
 ---
