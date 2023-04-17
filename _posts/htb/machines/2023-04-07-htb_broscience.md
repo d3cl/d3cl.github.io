@@ -9,7 +9,10 @@ render_with_liquid: false
 
 This machine is a medium Linux box and starts out with a website that shows a bunch of fitness related blogs. The website also has a login and registration page.
 
+![Homepage](/assets/img/htb-broscience-homepage.png)
+
  ## Reconnaissance
+
 ```bash
 $ nmap -sC -sV  -A  -oN nmap_result 10.10.11.195
 Starting Nmap 7.93 ( https://nmap.org ) at 2023-04-07 07:36 CEST
