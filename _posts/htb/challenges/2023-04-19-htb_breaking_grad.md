@@ -1,5 +1,5 @@
 ---
-title: HackTheBox - BreakingGrad
+title: HackTheBox - Breaking Grad
 author: 0
 date: 2023-04-19 18:00:00 +0800
 categories: [htb, challenge]
