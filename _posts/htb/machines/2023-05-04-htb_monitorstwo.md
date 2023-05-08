@@ -270,7 +270,7 @@ To exploit this, we will need to:
 
 ### Prepare the container
 
-We need to first find a way to get root in the docker container. We check for any binaries that have the SUID enabled, `/sbin/capsh` looks interesting. By looking `capsh` on [gtfobin](gtfobin.io) we find a way to get a root shell in the container. Once we have root privileges we add SUID to `/bin/bash`.
+We need to first find a way to get root in the docker container. We check for any binaries that have the SUID enabled, `/sbin/capsh` looks interesting. By looking `capsh` on [gtfobins.io](https://gtfobins.github.io/) we find a way to get a root shell in the container. Once we have root privileges we add SUID to `/bin/bash`.
 
 ```bash
 bash-5.1$ find / -type f -perm -u=s -ls 2>/dev/null
