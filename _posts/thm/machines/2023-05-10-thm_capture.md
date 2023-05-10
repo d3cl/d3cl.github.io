@@ -23,6 +23,8 @@ I started using burp intruder for this but after a few requests we need to fill 
 
 ![Captcha](/assets/img/thm-capture-captcha.png)
 
+## Exploit
+
 The python script makes a request to the login page, iterating over all usernames, solving the captcha if needed. Once it finds a username where the "User X not found" error isn't present, the script loops over all passwords.
 
 ```python
@@ -105,3 +107,7 @@ $ python3 exploit.py http://10.10.32.213
 307 - natalie - 200 - True - 30 - angel2
 CREDENTIALS FOUND: natalie:sk**REDACTED**rd
 ```
+
+When logging in with the found credentials, we receive the flag.
+
+![Flag](/assets/img/thm-capture-flag2.png)
